@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { ExpandableSection } from "@/components/expandable-section";
 import { ExternalLinkIcon } from "@/components/external-link-icon";
 import { landingContent } from "@/data/landing-content";
@@ -9,8 +10,15 @@ export default function Home() {
   return (
     <div className="site-shell">
       <header className="hero" id="top">
-        <div className="hero-logo" aria-hidden="true">
-          JL
+        <div className="hero-logo">
+          <Image
+            src="/photo_2026-02-13_16-09-17.jpg"
+            alt="Josh 個人照片"
+            fill
+            priority
+            className="hero-logo-image"
+            sizes="96px"
+          />
         </div>
         <div className="hero-brand">{landingContent.brandName}</div>
         <h1 className="hero-title">{landingContent.heroTitle}</h1>

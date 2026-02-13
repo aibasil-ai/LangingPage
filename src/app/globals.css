@@ -70,21 +70,21 @@ a {
 }
 
 .hero-logo {
+  position: relative;
   display: inline-flex;
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   border: 1px solid rgba(47, 84, 116, 0.24);
-  background: linear-gradient(140deg, #2f5474, #177f8a);
-  color: #ffffff;
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  overflow: hidden;
   margin-bottom: 16px;
   box-shadow: var(--shadow-sm);
+}
+
+.hero-logo-image {
+  object-fit: cover;
 }
 
 .hero-brand {

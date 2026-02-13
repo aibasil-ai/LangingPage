@@ -2,7 +2,7 @@ import type { LandingContent } from "@/types/landing";
 
 export const landingContent: LandingContent = {
   brandName: "JOSH LIN",
-  heroTitle: "個人數位實驗室",
+  heroTitle: "數位實驗世界",
   heroSubtitle: "系統、工具、內容與遊戲化體驗的整合入口",
   intro: {
     title: "這裡是我的個人 landing page",
