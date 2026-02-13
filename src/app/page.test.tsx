@@ -31,12 +31,17 @@ describe("Home landing page", () => {
     render(<Home />);
 
     const systemsSection = screen.getAllByLabelText("section-數位系統")[0];
-    expect(within(systemsSection).getAllByRole("link")).toHaveLength(1);
+    expect(within(systemsSection).getAllByRole("link")).toHaveLength(2);
     expect(
       within(systemsSection).getByRole("link", {
         name: /跨語言專案文獻轉譯平台/,
       }),
     ).toHaveAttribute("href", "https://project-translate.tools.aibasil.com");
+    expect(
+      within(systemsSection).getByRole("link", {
+        name: /OpenSpec 專案追蹤面板/,
+      }),
+    ).toHaveAttribute("href", "https://openspec-dashboard.tools.aibasil.com/");
 
     const toolsSection = screen.getAllByLabelText("section-實用工具")[0];
     expect(within(toolsSection).getAllByRole("link")).toHaveLength(3);
@@ -114,6 +119,24 @@ describe("Home landing page", () => {
     const iconBox = firstCard.querySelector(".card-icon");
     expect(iconBox).not.toBeNull();
     expect(iconBox?.querySelector("svg")).not.toBeNull();
+  });
+
+  it("renders dedicated OpenSpec project tracking icon glyph", () => {
+    render(<Home />);
+
+    const systemsSection = screen.getAllByLabelText("section-數位系統")[0];
+    const openSpecCard = within(systemsSection).getByRole("link", {
+      name: /OpenSpec 專案追蹤面板/,
+    });
+    const iconBox = openSpecCard.querySelector(".card-icon");
+
+    expect(iconBox).not.toBeNull();
+    expect(
+      iconBox?.querySelector('rect[width="17"][height="16"]'),
+    ).not.toBeNull();
+    expect(
+      iconBox?.querySelector('path[d="m5.5 12 1.8 1.8 2.7-3.2"]'),
+    ).not.toBeNull();
   });
 
   it("renders icons on each external website link item", () => {

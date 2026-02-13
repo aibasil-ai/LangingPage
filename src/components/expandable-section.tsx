@@ -85,6 +85,16 @@ function CardIconGlyph({ code }: { code: string }) {
           <path d="M14 13h3" />
         </svg>
       );
+    case "OSD":
+      return (
+        <svg {...commonProps}>
+          <rect x="3.5" y="4" width="17" height="16" rx="2.5" />
+          <path d="M9 4v16" />
+          <path d="M12 9h6" />
+          <path d="M12 13h4" />
+          <path d="m5.5 12 1.8 1.8 2.7-3.2" />
+        </svg>
+      );
     case "PDF":
       return (
         <svg {...commonProps}>

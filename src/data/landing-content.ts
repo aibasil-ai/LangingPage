@@ -21,12 +21,19 @@ export const landingContent: LandingContent = {
       cards: [
         {
           title: "跨語言專案文獻轉譯平台",
-          description:
-            "整合先進的自然語言處理技術，提供繁體中文與日文之翻譯服務",
+          description: "整合自然語言處理技術，提供繁體中文與日文之翻譯服務",
           href: "https://project-translate.tools.aibasil.com",
           external: true,
           icon: "TRN",
           iconTone: "steel",
+        },
+        {
+          title: "OpenSpec 專案追蹤面板",
+          description: "OpenSpec 規格管理與追蹤儀表板",
+          href: "https://openspec-dashboard.tools.aibasil.com/",
+          external: true,
+          icon: "OSD",
+          iconTone: "slate",
         },
       ],
     },
