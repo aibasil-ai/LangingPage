@@ -143,6 +143,6 @@ describe("Home landing page", () => {
       within(externalSection as HTMLElement).getByRole("link", {
         name: /Facebook/,
       }),
-    ).toHaveAttribute("href", "https://www.facebook.com/aibasil/");
+    ).toHaveAttribute("href", "#");
   });
 });

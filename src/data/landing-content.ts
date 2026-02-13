@@ -128,7 +128,7 @@ export const landingContent: LandingContent = {
     },
   ],
   externalLinks: [
-    { label: "Profile", href: "https://example.com/portfolio", icon: "portfolio" },
+    { label: "Profile", href: "#", icon: "portfolio" },
     { label: "GitHub", href: "https://github.com/aibasil-ai", icon: "github" },
     {
       label: "LinkedIn",
@@ -147,7 +147,7 @@ export const landingContent: LandingContent = {
     },
     {
       label: "Facebook",
-      href: "https://www.facebook.com/aibasil/",
+      href: "#",
       icon: "facebook",
     },
   ],
