@@ -32,7 +32,9 @@ export default function Home() {
             {landingContent.intro.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-            <p className="intro-note">{landingContent.intro.note}</p>
+            {landingContent.intro.note ? (
+              <p className="intro-note">{landingContent.intro.note}</p>
+            ) : null}
           </article>
         </section>
 
